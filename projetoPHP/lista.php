@@ -27,6 +27,7 @@
                 CASE 
                     WHEN '$filtro' = 'prioridade' AND '$ordem' = 'ASC' THEN FIELD(tarefa.prioridade, 'alta', 'media', 'baixa')
                     WHEN '$filtro' = 'prioridade' AND '$ordem' = 'DESC' THEN FIELD(tarefa.prioridade, 'baixa', 'media', 'alta')
+                    
                 END, 
                 $filtro $ordem";
 
@@ -52,18 +53,6 @@
             <option value="nome" <?= $filtro == 'nome' ? 'selected' : '' ?>>Colaborador</option>
         </select>
 
-        <?php if ($filtro === 'nome'): ?>
-            <label for="colaborador_id">Colaborador:</label>
-            <select name="colaborador_id" id="colaborador_id">
-                <option value="">Escolha um colaborador</option>
-                <?php foreach ($colaboradores as $colaborador): ?>
-                    
-                    <option value="<?= $colaborador['id'] ?>" ?>
-                        <?= $colaborador['nome'] ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-        <?php endif; ?>
 
         <label for="ordem">Ordem:</label>
         <select name="ordem" id="ordem">

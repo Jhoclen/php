@@ -1,7 +1,7 @@
 <?php 
     
     require'db.php';
-    // Consulta para obter nomes de todos os colaboradores 
+    
     $sqli = "SELECT id, nome FROM colaboradores";
     $colaboradoresRes = mysqli_query($conn, $sqli);
     $colaboradores = [];
