@@ -19,7 +19,7 @@
         $colaboradores[] = $colaborador;
     }
 
-   
+//Junta os dados da tabela colaboradores, com o Ij especifica que a junção acontece quando o colaborador_id e igual colaboradores.id
     $sql = "SELECT tarefa.id, tarefa.titulo, tarefa.descricao, tarefa.prazo, tarefa.prioridade, colaboradores.nome
             FROM tarefa
             INNER JOIN colaboradores ON tarefa.colaborador_id = colaboradores.id
