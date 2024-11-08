@@ -66,7 +66,6 @@
         <select name="filtro" id="filtro">
             <option value="prazo" <?= $filtro == 'prazo' ? 'selected' : '' ?>>Prazo</option>
             <option value="prioridade" <?= $filtro == 'prioridade' ? 'selected' : '' ?>>Prioridade</option>
-            <option value="nome" <?= $filtro == 'nome' ? 'selected' : '' ?>>Colaborador</option>
         </select>
  
         <label for="ordem">Ordem:</label>
